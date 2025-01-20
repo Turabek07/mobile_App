@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Assignments</string>
+    <string name="already_a_member_log_in">Already a member? Log In</string>
+    <string name="next_button">Next ></string>
+    <string name="password">password\n</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="conditions">condition\n</string>
+    <string name="and">and\n</string>
+    <string name="terms">Tearms and conditon\n</string>
+    <string name="check_box">box_check\n</string>
+    <string name="full_name">name_full\n</string>
+    <string name="valid_email">email_valid\n</string>
+    <string name="phone_number">ph_number\n</string>
+    <string name="strong_password">pass_strong\n</string>
+    <string name="header_desc">desc_head</string>
+    <string name="get_started">get_started</string>
+    <string name="image">image_descr</string>
+    <string name="welcome">Welcome\n</string>
+    <string name="sign_in">sign_in</string>
+    <string name="remember_me">remeber_me\n</string>
+    <string name="forget_password">forget_pass</string>
+    <string name="New_Member">new_member</string>
+    <string name="register_now">register</string>
+
 </resources>

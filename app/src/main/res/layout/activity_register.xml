@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/welcomeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="83dp"
+        android:text="@string/get_started"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/tName"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@string/full_name" />
+        <EditText
+            android:id="@+id/tEmail"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@string/valid_email" />
+        <EditText
+            android:id="@+id/tPhoneNumber"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@string/phone_number" />
+        <EditText
+            android:id="@+id/tPassword"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@string/strong_password" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/signIn"
+        app:layout_constraintTop_toBottomOf="@+id/signIn">
+        <CheckBox
+            android:id="@+id/agreementCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:buttonTint="@color/black"
+            android:text="By checking the box you agree to our Terms and Conditions."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_box"
+            android:textSize="9sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms"
+            android:textColor="#6C63FF"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/and"
+            android:textSize="9sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conditions"
+            android:textColor="#6C63FF"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="97dp"
+        android:backgroundTint="#6C63FF"
+        android:text="@string/next_button"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/nextButton"
+        app:layout_constraintStart_toStartOf="@+id/nextButton"
+        app:layout_constraintTop_toBottomOf="@+id/nextButton">
+
+        <TextView
+            android:id="@+id/newMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/New_Member"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_now"
+            android:textColor="#6C63FF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
