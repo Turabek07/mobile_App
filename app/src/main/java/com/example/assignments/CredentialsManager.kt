@@ -2,8 +2,31 @@ package com.example.assignments
 
 class CredentialsManager {
 
-
     private val userCredentials: MutableMap<String, String> = mutableMapOf()
+
+    companion object {
+        @Volatile
+        private var INSTANCE: CredentialsManager? = null
+
+        fun getInstance(): CredentialsManager =
+            INSTANCE ?: synchronized(this) {
+                INSTANCE ?: CredentialsManager().also { INSTANCE = it }
+            }
+    }
+
+
+    fun loginUser(email: String, password: String): Boolean {
+        return userCredentials[email.lowercase()] == password
+    }
+
+
+    fun registerUser(email: String, password: String): Boolean {
+        if (userCredentials.containsKey(email.lowercase())) {
+            return false
+        }
+        userCredentials[email.lowercase()] = password
+        return true
+    }
 
 
     fun isEmailValid(email: String): Boolean {
@@ -16,20 +39,4 @@ class CredentialsManager {
     fun isPasswordValid(password: String): Boolean {
         return password.isNotEmpty()
     }
-
-
-    fun register(email: String, password: String): String {
-        val emailLowerCase = email.trim().toLowerCase()
-
-
-        if (userCredentials.containsKey(emailLowerCase)) {
-            return "Email is already registered"
-        }
-
-
-        userCredentials[emailLowerCase] = password
-        return "Registration successful"
-    }
 }
-
-
