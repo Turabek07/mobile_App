@@ -21,5 +21,6 @@
     <string name="forget_password">forget_pass</string>
     <string name="New_Member">new_member</string>
     <string name="register_now">register</string>
+    <string name="item_image">item_image\n</string>
 
 </resources>

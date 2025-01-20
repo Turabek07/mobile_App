@@ -2,4 +2,5 @@
 <resources>
     <item name="textViewFragmentA" type="id">FragmentA</item>
     <item name="textViewFragmentB" type="id">FragmentB</item>
+    <item name="recyclerView" type="id">RecycleView</item>
 </resources>
